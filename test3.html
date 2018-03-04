@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Регистрация</title>
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<form method="post" action="javascript:alert('Форма заполнена корректно');">
+	<h2>Регистрация</h2>
+	<label for="username">Имя</label>
+	<input name="username" type="text" id="username" class="form-control" placeholder="Введите Имя" required>
+	<br>
+	<label for="email">Email</label>
+	<input name="email" type="email" id="email" class="form-control" placeholder="Введите Email" required>
+	<br>
+	<label for="phone">Телефон
+		<small>(в формате: +7 (ххх) ххх-хх-хх)</small>
+	</label>
+	<input name="phone" type="tel" id="phone" class="form-control"
+	       pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}[-][0-9]{2}[-][0-9]{2}" required>
+	<br>
+	<label for="postcode">Почтовый индекс
+		<small>(в формате: хххххх)</small>
+	</label>
+	<input name="postcode" type="text" id="postcode" class="form-control" pattern="[0-9]{6}" required>
+	<br>
+	<b>Пол</b>
+	<br>
+	<input name="gender" type="radio" id="male" value="male" required>
+	<label for="male">мужской</label>
+	<input name="gender" type="radio" id="female" value="female" required>
+	<label for="female">женский</label>
+	<br>
+	<hr>
+	<input name="compliance" type="checkbox" id="compliance" required>
+	<label for="compliance">Я согласен с правилами использования ресурса.</label>
+	<br>
+	<input type="submit" name="btnSignup" id="btnSignup" class="btn btn-primary">
+</form>
+
+</body>
+</html>
